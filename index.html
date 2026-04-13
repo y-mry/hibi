@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="やりたいことを後回しせず、始める一歩を軽くして今日の行動に変えていく、習慣化アプリ「hibi（ヒビ）」">
+    <title>hibi（ヒビ） |「やった」に変えていく習慣化アプリ </title>
+    <!-- OGP -->
+    <meta property="og:title" content="hibi（ヒビ）" />
+    <meta property="og:description"
+        content="やりたいことを後回しせず、始める一歩を軽くして今日の行動に変えていく、習慣化アプリ「hibi（ヒビ）」" />
+    <meta property="og:image" content="https://y-mry.github.io/hibi/img/ogp.png" />
+    <meta property="og:url" content="https://y-mry.github.io/hibi" />
+    <!-- Google Fonts の読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <!-- inview -->
+    <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2abdc1e923.js" crossorigin="anonymous"></script>
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/manifest.webmanifest">
+
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="symbol">
+            <img src="img/logo-symbol.svg" alt="hibiのシンボル">
+        </a>
+
+        <button class="hamburger-menu">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="menu" id="global-menu">
+            <ul>
+                <li><a href="#about">hibiとは</a></li>
+                <li><a href="#features">機能紹介</a></li>
+                <li><a href="#voice">利用者の声</a></li>
+                <li><a href="https://apps.apple.com/jp/iphone/apps" class="cta">アプリをダウンロード</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-logo"><img src="img/logo-type.svg" alt="hibiのロゴ"></div>
+                <div class="hero-text">
+                    <h1><span class="line"><span class="first-bracket">「</span>あとでやろう」 を、</span><br>
+                        <span class="line"><span class="first-bracket">「</span>やった」
+                            に変えていく。</span>
+                    </h1>
+                    <p class="hero-catchcopy">やりたいことを、今日の行動に変える習慣アプリ。</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="https://apps.apple.com/jp/iphone/apps">アプリをダウンロード</a>
+                </div>
+            </div>
+            <picture class="hero-img">
+                <source srcset="img/sp_hero.png" media="(max-width: 800px)">
+                <img src="img/pc_hero.png" alt="">
+            </picture>
+        </section>
+
+        <section class="l-section about" id="about">
+            <h2>hibiとは</h2>
+            <div class="about-content">
+                <img class="show" src="img/human.png" alt="悩む人のイラスト">
+                <div class="about-text">
+                    <p class="lead_title">「今日は何する？」</p>
+                    <p class="lead_sub">やりたいことを見逃さず、<br>今日の行動に変えていくアプリ。</p>
+                    <div class="text">
+                        <p>私たちは毎日、仕事や家事、連絡、予定など、たくさんの小さな選択を重ねながら過ごしています。</p>
+                        <p>本を読みたい。勉強したい。体を動かしたい。そう思っていても、いつの間にか、選択の多さに埋もれてしまう。</p>
+                    </div>
+                    <p class="summary">hibiは、選ぶ負担を減らし、始めるきっかけをつくるアプリです。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="l-section features" id="features">
+            <h2>hibiでできること</h2>
+            <div class="container">
+                <div class="box">
+                    <div class="text">
+                        <p class="box-number first">01</p>
+                        <h3>今日のやることを<br class="sp-show">すぐ選べる</h3>
+                        <p>登録したタスクの中から、起動後すぐにその日やることを感覚的に選べます。<br>
+                            迷う時間を減らし、行動への一歩を軽くします。</p>
+                    </div>
+                    <div class="app-img show">
+                        <img src="img/app_startup.png" alt="アプリ起動画面のイメージ">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <p class="box-number second">02</p>
+                        <h3>タスクに合った<br>記録方法</h3>
+                        <p>時間で測るタスクはポモドーロ方式で記録。<br>
+                            一覧画面では、時間・回数・単発タスクをそれぞれの方法で確認できます。</p>
+                    </div>
+                    <div class="app-img two-screen show">
+                        <img src="img/app_time.png" alt="時間カウント画面のイメージ">
+                        <img src="img/app_task.png" alt="タスク管理画面のイメージ">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <p class="box-number third">03</p>
+                        <h3>続けた日が<br>ちゃんと残る</h3>
+                        <p>達成した日はカレンダーに記録され、継続した日は線でつながって表示。<br>
+                            日々の達成と継続の流れをひと目で確認できます。</p>
+                    </div>
+                    <div class="app-img show">
+                        <img src="img/app_schedule.png" alt="カレンダー画面のイメージ">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="text">
+                        <p class="box-number fourth">04</p>
+                        <h3>週単位で<br>振り返られる</h3>
+                        <p>達成度や回数、時間を数値で表示し、カテゴリ別の総時間は棒グラフで確認。<br>
+                            1週間の行動をまとめて振り返れます。</p>
+                    </div>
+                    <div class="app-img show">
+                        <img src="img/app_graph.png" alt="達成時間とグラフ画面のイメージ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l-section voice" id="voice">
+            <h2>利用者の声</h2>
+            <div class="container">
+                <div class="box">
+                    <div class="voice-img"><img src="img/woman1.png" alt="両手を広げてキラキラしている女性のイラスト"></div>
+                    <div class="text">
+                        <p><span class="highlight">“今日はこれをやろう”と決めるハードルが下がりました。</span><br>
+                            やりたいことはあるのに後回しにしがちだったので、最初の一歩を選びやすくなったのがよかったです。</p>
+                        <p class="user">moneさん　(20代・学生)</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="voice-img"><img src="img/woman2.png" alt="グッジョブしている女性のイラスト"></div>
+                    <div class="text">
+                        <p>完璧にできた日じゃなくても、ちゃんと記録が残るのが嬉しいです。<br>
+                            <span class="highlight">少しずつ続けている実感が見えるので、前よりも自分を責めずに取り組めるようになりました。</span>
+                        </p>
+                        <p class="user">kaoriさん　（30代・会社員）</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="voice-img"><img src="img/man1.png" alt="ハッとしている男性のイラスト"></div>
+                    <div class="text">
+                        <p>カレンダーや振り返り画面を見ると、続けてきたことがちゃんと見えて励みになります。<br>
+                            <span class="highlight">毎日きっちりできなくても、また再開しようと思えるのがhibiのいいところだと思います。</span>
+                        </p>
+                        <p class="user">kazukiさん　(20代・会社員)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="l-section download" id="download">
+            <img src="img/logo-symbol.svg" alt="hibiのオレンジ色のシンボルロゴ">
+            <h4>続けられるのは、<br>
+                記録が自分に合っているから。</h4>
+            <div class="benefit">
+                <p><i class="fa-solid fa-pen-to-square"></i>自分に合った記録方法を選べる</p>
+                <p><i class="fa-solid fa-list"></i>勉強、運動、読書など幅広く使える</p>
+                <p><i class="fa-solid fa-arrows-rotate"></i>無理なく続けられる設計</p>
+            </div>
+            <p class="text">マルチタスクな毎日でも、やりたいことを見逃さず、今日の行動に変えていくためのアプリです。</p>
+            <a class="cta" href="https://apps.apple.com/jp/iphone/apps">アプリをダウンロード</a>
+            <img class="footer-img show" src="img/footer_app.png" alt="アプリ起動画面のイメージ">
+        </section>
+    </main>
+    <footer>
+        <div class="footer-logo">
+            <a href="index.html">
+                <img class="symbol" src="img/logo-symbol.svg" alt="">
+                <img class="whitelogo" src="img/hibi_logo_white.png" alt="">
+            </a>
+        </div>
+        <p class="copy">&copy; hibi. All rights reserved.</p>
+        <p class="copy">※本サイトはポートフォリオ用に自主制作した架空のWebサイトです。</p>
+        <ul class="footer-menu">
+            <li><a href="">運営会社</a></li>
+            <li><a href="">利用規約</a></li>
+            <li><a href="">プライバシーポリシー</a></li>
+        </ul>
+
+    </footer>
+</body>
+
+<script>
+    $(function () {
+
+        // ハンバーガーボタンを押した時
+        // → ボタンに is-open を付け外し
+        // → メニューにも is-open を付け外し
+        $('.hamburger-menu').on('click', function () {
+            $(this).toggleClass('is-open');
+            $('.menu').toggleClass('is-open');
+        });
+
+        // メニュー内のリンクを押した時
+        // → 開いたままだと邪魔なので閉じる
+        $('.menu a').on('click', function () {
+            $('.hamburger-menu').removeClass('is-open');
+            $('.menu').removeClass('is-open');
+        });
+
+        $(".show").on("inview", function () {
+            $(this).addClass("fade-in");
+        });
+    });
+</script>
+
+</html>
