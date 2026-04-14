@@ -12,7 +12,7 @@
         content="やりたいことを後回しせず、始める一歩を軽くして今日の行動に変えていく、習慣化アプリ「hibi（ヒビ）」" />
     <meta property="og:image" content="https://y-mry.github.io/hibi/img/ogp.png" />
     <meta property="og:url" content="https://y-mry.github.io/hibi" />
-    <!-- Google Fonts の読み込み -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -212,22 +212,16 @@
 
 <script>
     $(function () {
-
-        // ハンバーガーボタンを押した時
-        // → ボタンに is-open を付け外し
-        // → メニューにも is-open を付け外し
+        // ハンバーガー
         $('.hamburger-menu').on('click', function () {
             $(this).toggleClass('is-open');
             $('.menu').toggleClass('is-open');
         });
-
-        // メニュー内のリンクを押した時
-        // → 開いたままだと邪魔なので閉じる
         $('.menu a').on('click', function () {
             $('.hamburger-menu').removeClass('is-open');
             $('.menu').removeClass('is-open');
         });
-
+        // inview
         $(".show").on("inview", function () {
             $(this).addClass("fade-in");
         });
