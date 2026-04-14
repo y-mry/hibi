@@ -288,7 +288,7 @@ header {
 
 /* ================ hero ================ */
 .hero {
-    margin-top: 72px;
+    margin-top: 28px;
     display: flex;
 
     @media (width <=600px) {
