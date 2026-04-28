@@ -30,6 +30,8 @@ p {
 
     @media (width <=900px) {
         font-size: 14px;
+        font-feature-settings: "palt";
+        letter-spacing: 0.1em;
     }
 }
 
@@ -323,7 +325,7 @@ header {
         h1 {
             font-size: clamp(28px, 4vw, 48px);
             font-weight: bold;
-            font-feature-settings: "palt" 1;
+            font-feature-settings: "palt";
             letter-spacing: 0.1em;
             margin-top: 1em;
 
@@ -661,6 +663,7 @@ header {
         margin-bottom: 40px;
 
         @media (width <=600px) {
+            display: block;
             gap: 18px;
             margin-bottom: 50px;
         }
@@ -676,6 +679,7 @@ header {
 
             @media (width <=600px) {
                 height: 150px;
+                margin: auto;
             }
 
             img {
@@ -735,6 +739,8 @@ header {
         font-size: clamp(32px, 4vw, 48px);
         font-weight: 900;
         text-align: center;
+        font-feature-settings: "palt";
+        letter-spacing: 0.05em;
 
         @media (width <=600px) {
             font-size: 24px;
