@@ -8,8 +8,7 @@
     <title>hibi（ヒビ） |「やった」に変えていく習慣化アプリ </title>
     <!-- OGP -->
     <meta property="og:title" content="hibi（ヒビ）" />
-    <meta property="og:description"
-        content="やりたいことを後回しせず、始める一歩を軽くして今日の行動に変えていく、習慣化アプリ「hibi（ヒビ）」" />
+    <meta property="og:description" content="やりたいことを後回しせず、始める一歩を軽くして今日の行動に変えていく、習慣化アプリ「hibi（ヒビ）」" />
     <meta property="og:image" content="https://y-mry.github.io/hibi/img/ogp.png" />
     <meta property="og:url" content="https://y-mry.github.io/hibi" />
     <!-- Google Fonts -->
@@ -32,6 +31,8 @@
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="manifest" href="img/favicon/manifest.webmanifest">
+    <!-- KUTE.js -->
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
 
 </head>
 
@@ -73,10 +74,36 @@
                     <a href="https://apps.apple.com/jp/iphone/apps">アプリをダウンロード</a>
                 </div>
             </div>
-            <picture class="hero-img">
-                <source srcset="img/sp_hero.png" media="(max-width: 800px)">
-                <img src="img/pc_hero.png" alt="">
-            </picture>
+
+            <div class="hero-visual-wrapper">
+                <svg id="main-vis" width="637" height="705" viewBox="0 0 637 705" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path id="hibi-shape" filter="url(#blur-effect)"
+                        d="M187.68,576.98c-10.77-2.16-20.73-6.37-29.35-13.04-35.62-27.55-48.43-96.64-77.28-155.03C52.57,350.47,8.06,303.17.95,250.96c-6.77-52.23,23.5-108.98,66.24-139.43,42.74-30.42,97.57-34.54,140.31-49.75,37.71-13.54,49.45-29.23,97.29-48.85,92.11-33.38,178.98-1.86,237.45,91.62,26.01,41.54,37.76,96.22,27.43,144.36-9.96,47.69-41.66,88.84-73.01,119.68-31.33,30.84-62.32,51.82-93.3,82.26-30.62,30.84-61.6,71.15-106.48,98.7-33.73,20.88-75.46,34.21-109.19,27.44Z"
+                        fill="url(#hibi-grad)" />
+                    <defs>
+
+                        <linearGradient id="hibi-grad" x1="558.846" y1="571.645" x2="97.1073" y2="131.705"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#1B1D7D" />
+                            <stop offset="1" stop-color="#FFDED2" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <svg style="display: none;">
+                    <path id="shape2"
+                        d="M474.17,524.98c-6.6,8.78-14.7,15.95-24.43,20.85-40.23,20.24-108.08,1.98-173.2,2.8-65.01.47-126.89,20.2-177.05,4.08-50.04-16.44-88.16-68.24-97.18-119.93-9-51.68,10.95-102.92,15.68-148.04,4.06-39.86-5.02-57.22-2.08-108.85C25.55,78.4,91.47,13.64,201.04,1.24c48.69-5.53,103.09,7.47,142.06,37.57,38.72,29.57,62.16,75.92,76.44,117.52,14.3,41.57,19.84,78.58,33.93,119.67,14.6,40.93,37.59,86.28,43.08,138.65,4.28,39.44-1.71,82.83-22.37,110.34Z">
+                    </path>
+                </svg>
+
+                <picture class="hero-img">
+                    <source srcset="img/sp_hero.png" media="(max-width: 800px)">
+                    <img src="img/pc_hero.png" alt="">
+                </picture>
+            </div>
+
+
         </section>
 
         <section class="l-section about" id="about">
@@ -226,6 +253,28 @@
             $(this).addClass("fade-in");
         });
     });
+</script>
+<script>
+    // 1. パス1 → パス2
+    const tween1 = KUTE.fromTo('#hibi-shape',
+        { path: '#hibi-shape' },
+        { path: '#shape2' },
+        { duration: 10000, easing: 'easingLinear' }
+    );
+
+    // 2. パス2 → パス1
+    const tween2 = KUTE.fromTo('#hibi-shape',
+        { path: '#shape2' },
+        { path: '#hibi-shape' },
+        { duration: 10000, easing: 'easingLinear' }
+    );
+
+    // 連結させて無限ループにする
+    tween1.chain(tween2);
+    tween2.chain(tween1);
+
+    // アニメーション開始
+    tween1.start();
 </script>
 
 </html>
