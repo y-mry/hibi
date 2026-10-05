@@ -36,224 +36,255 @@
 
 </head>
 
-<body>
-    <header>
-        <a href="index.html" class="symbol">
-            <img src="img/logo-symbol.svg" alt="hibiのシンボル">
-        </a>
+<body id="top">
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-logo">
+                <a href="#top"><img src="./img/logo-symbol.svg" alt="hibi" draggable="false"></a>
+            </div>
 
-        <button class="hamburger-menu">
-            <span></span><span></span><span></span>
-        </button>
-
-        <nav class="menu" id="global-menu">
-            <ul>
-                <li><a href="#about">hibiとは</a></li>
-                <li><a href="#features">機能紹介</a></li>
-                <li><a href="#voice">利用者の声</a></li>
-                <li><a href="https://apps.apple.com/jp/iphone/apps" class="cta">アプリをダウンロード</a></li>
-            </ul>
-        </nav>
-
+            <nav class="header-nav">
+                <ul class="header-list">
+                    <li><a href="#about">hibiとは</a></li>
+                    <li><a href="#how">使い方</a></li>
+                    <li><a href="#features">できること</a></li>
+                </ul>
+                <a href="#top" class="header-cta">hibiをはじめる<i class="fa-solid fa-arrow-right"></i></a>
+            </nav>
+        </div>
     </header>
 
 
     <main>
 
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-logo"><img src="img/logo-type.svg" alt="hibiのロゴ"></div>
-                <div class="hero-text">
-                    <h1><span class="line"><span class="first-bracket">「</span>あとでやろう」 を、</span><br>
-                        <span class="line"><span class="first-bracket">「</span>やった」
-                            に変えていく。</span>
-                    </h1>
-                    <p class="hero-catchcopy">やりたいことを、今日の行動に変える習慣アプリ。</p>
-                </div>
-                <div class="hero-cta">
-                    <a href="https://apps.apple.com/jp/iphone/apps">アプリをダウンロード</a>
-                </div>
-            </div>
-
-            <div class="hero-visual-wrapper">
-                <svg id="main-vis" width="637" height="705" viewBox="0 0 637 705" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path id="hibi-shape" filter="url(#blur-effect)"
-                        d="M187.68,576.98c-10.77-2.16-20.73-6.37-29.35-13.04-35.62-27.55-48.43-96.64-77.28-155.03C52.57,350.47,8.06,303.17.95,250.96c-6.77-52.23,23.5-108.98,66.24-139.43,42.74-30.42,97.57-34.54,140.31-49.75,37.71-13.54,49.45-29.23,97.29-48.85,92.11-33.38,178.98-1.86,237.45,91.62,26.01,41.54,37.76,96.22,27.43,144.36-9.96,47.69-41.66,88.84-73.01,119.68-31.33,30.84-62.32,51.82-93.3,82.26-30.62,30.84-61.6,71.15-106.48,98.7-33.73,20.88-75.46,34.21-109.19,27.44Z"
-                        fill="url(#hibi-grad)" />
-                    <defs>
-
-                        <linearGradient id="hibi-grad" x1="558.846" y1="571.645" x2="97.1073" y2="131.705"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#1B1D7D" />
-                            <stop offset="1" stop-color="#FFDED2" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-
-                <svg style="display: none;">
-                    <path id="shape2"
-                        d="M474.17,524.98c-6.6,8.78-14.7,15.95-24.43,20.85-40.23,20.24-108.08,1.98-173.2,2.8-65.01.47-126.89,20.2-177.05,4.08-50.04-16.44-88.16-68.24-97.18-119.93-9-51.68,10.95-102.92,15.68-148.04,4.06-39.86-5.02-57.22-2.08-108.85C25.55,78.4,91.47,13.64,201.04,1.24c48.69-5.53,103.09,7.47,142.06,37.57,38.72,29.57,62.16,75.92,76.44,117.52,14.3,41.57,19.84,78.58,33.93,119.67,14.6,40.93,37.59,86.28,43.08,138.65,4.28,39.44-1.71,82.83-22.37,110.34Z">
-                    </path>
-                </svg>
-
-                <picture class="hero-img">
-                    <source srcset="img/sp_hero.png" media="(max-width: 800px)">
-                    <img src="img/pc_hero.png" alt="起動画面のイメージとタスク時間計測画面のiPhoneモックアップ">
-                </picture>
-            </div>
-
-
-        </section>
-
-        <section class="l-section about" id="about">
-            <h2>hibiとは</h2>
-            <div class="about-content">
-                <img class="show" src="img/human.png" alt="悩む人のイラスト">
-                <div class="about-text">
-                    <p class="lead_title">「今日は何する？」</p>
-                    <p class="lead_sub">やりたいことを見逃さず、<br>今日の行動に変えていくアプリ。</p>
-                    <div class="text">
-                        <p>私たちは毎日、仕事や家事、連絡、予定など、たくさんの小さな選択を重ねながら過ごしています。</p>
-                        <p>本を読みたい。勉強したい。体を動かしたい。そう思っていても、いつの間にか、選択の多さに埋もれてしまう。</p>
-                    </div>
-                    <p class="summary">hibiは、選ぶ負担を減らし、始めるきっかけをつくるアプリです。</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="l-section features" id="features">
-            <h2>hibiでできること</h2>
-            <div class="container">
-                <div class="box">
-                    <div class="text">
-                        <p class="box-number first">01</p>
-                        <h3>今日のやることを<br class="sp-show">すぐ選べる</h3>
-                        <p>登録したタスクの中から、起動後すぐにその日やることを感覚的に選べます。<br>
-                            迷う時間を減らし、行動への一歩を軽くします。</p>
-                    </div>
-                    <div class="app-img show">
-                        <img src="img/app_startup.png" alt="アプリ起動画面のイメージ">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <p class="box-number second">02</p>
-                        <h3>タスクに合った<br>記録方法</h3>
-                        <p>時間で測るタスクはポモドーロ方式で記録。<br>
-                            一覧画面では、時間・回数・単発タスクをそれぞれの方法で確認できます。</p>
-                    </div>
-                    <div class="app-img two-screen show">
-                        <img src="img/app_time.png" alt="時間カウント画面のイメージ">
-                        <img src="img/app_task.png" alt="タスク管理画面のイメージ">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <p class="box-number third">03</p>
-                        <h3>続けた日が<br>ちゃんと残る</h3>
-                        <p>達成した日はカレンダーに記録され、継続した日は線でつながって表示。<br>
-                            日々の達成と継続の流れをひと目で確認できます。</p>
-                    </div>
-                    <div class="app-img show">
-                        <img src="img/app_schedule.png" alt="カレンダー画面のイメージ">
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="text">
-                        <p class="box-number fourth">04</p>
-                        <h3>週単位で<br>振り返られる</h3>
-                        <p>達成度や回数、時間を数値で表示し、カテゴリ別の総時間は棒グラフで確認。<br>
-                            1週間の行動をまとめて振り返られます。</p>
-                    </div>
-                    <div class="app-img show">
-                        <img src="img/app_graph.png" alt="達成時間とグラフ画面のイメージ">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="l-section voice" id="voice">
-            <h2>利用者の声</h2>
-            <div class="container">
-                <div class="box">
-                    <div class="voice-img"><img src="img/woman1.png" alt="両手を広げてキラキラしている女性のイラスト"></div>
-                    <div class="text">
-                        <p><span class="highlight">“今日はこれをやろう”と決めるハードルが下がりました。</span><br>
-                            やりたいことはあるのに後回しにしがちだったので、最初の一歩を選びやすくなったのがよかったです。</p>
-                        <p class="user">kaoriさん　（30代・会社員）</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="voice-img"><img src="img/woman2.png" alt="グッジョブしている女性のイラスト"></div>
-                    <div class="text">
-                        <p>完璧にできた日じゃなくても、ちゃんと記録が残るのが嬉しいです。<br>
-                            <span class="highlight">少しずつ続けている実感が見えるので、前よりも自分を責めずに取り組めるようになりました。</span>
+        <div class="hero-bg">
+            <section class="hero">
+                <div class="hero-innner">
+                    <div class="hero-logo"><img src="img/logo-type.svg" alt="hibiのロゴ" draggable="false"></div>
+                    <div class="hero-text">
+                        <h1><span class="line"><span class="first-bracket">「</span>あとでやろう」 を、</span><br>
+                            <span class="line"><span class="first-bracket">「</span>やった」
+                                に変えていく。</span>
+                        </h1>
+                        <p class="hero-catchcopy">
+                            やりたいことを、今日のひとつに。<br>
+                            選ぶ・記録する・振り返るを、やさしくつなぐ習慣サポートアプリ。
                         </p>
-                        <p class="user">moneさん　(20代・学生)</p>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#top">hibiをはじめる<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="voice-img"><img src="img/man1.png" alt="ハッとしている男性のイラスト"></div>
-                    <div class="text">
-                        <p>カレンダーや振り返り画面を見ると、続けてきたことがちゃんと見えて励みになります。<br>
-                            <span class="highlight">毎日きっちりできなくても、また再開しようと思えるのがhibiのいいところだと思います。</span>
-                        </p>
-                        <p class="user">kazukiさん　(20代・会社員)</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="l-section download" id="download">
-            <img src="img/logo-symbol.svg" alt="hibiのオレンジ色のシンボルロゴ">
-            <h4>続けられるのは、<br>
-                記録が自分に合っているから。</h4>
-            <div class="benefit">
-                <p><i class="fa-solid fa-pen-to-square"></i>自分に合った記録方法を選べる</p>
-                <p><i class="fa-solid fa-list"></i>勉強、運動、読書など幅広く使える</p>
-                <p><i class="fa-solid fa-arrows-rotate"></i>無理なく続けられる設計</p>
-            </div>
-            <p class="text">マルチタスクな毎日でも、やりたいことを見逃さず、今日の行動に変えていくためのアプリです。</p>
-            <a class="cta" href="https://apps.apple.com/jp/iphone/apps">アプリをダウンロード</a>
-            <img class="footer-img show" src="img/footer_app.png" alt="アプリ起動画面のイメージ">
-        </section>
-    </main>
-    <footer>
-        <div class="footer-logo">
-            <a href="index.html">
-                <img class="symbol" src="img/logo-symbol.svg" alt="hibiのオレンジ色のシンボルロゴ">
-                <img class="whitelogo" src="img/hibi_logo_white.png" alt="hibiの白いロゴ">
-            </a>
+                <div class="hero-visual-wrapper">
+                    <svg id="main-vis" width="637" height="705" viewBox="0 0 637 705" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path id="hibi-shape" filter="url(#blur-effect)"
+                            d="M187.68,576.98c-10.77-2.16-20.73-6.37-29.35-13.04-35.62-27.55-48.43-96.64-77.28-155.03C52.57,350.47,8.06,303.17.95,250.96c-6.77-52.23,23.5-108.98,66.24-139.43,42.74-30.42,97.57-34.54,140.31-49.75,37.71-13.54,49.45-29.23,97.29-48.85,92.11-33.38,178.98-1.86,237.45,91.62,26.01,41.54,37.76,96.22,27.43,144.36-9.96,47.69-41.66,88.84-73.01,119.68-31.33,30.84-62.32,51.82-93.3,82.26-30.62,30.84-61.6,71.15-106.48,98.7-33.73,20.88-75.46,34.21-109.19,27.44Z"
+                            fill="url(#hibi-grad)" />
+                        <defs>
+
+                            <linearGradient id="hibi-grad" x1="558.846" y1="571.645" x2="97.1073" y2="131.705"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1B1D7D" />
+                                <stop offset="1" stop-color="#FFDED2" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+                    <svg style="display: none;">
+                        <path id="shape2"
+                            d="M474.17,524.98c-6.6,8.78-14.7,15.95-24.43,20.85-40.23,20.24-108.08,1.98-173.2,2.8-65.01.47-126.89,20.2-177.05,4.08-50.04-16.44-88.16-68.24-97.18-119.93-9-51.68,10.95-102.92,15.68-148.04,4.06-39.86-5.02-57.22-2.08-108.85C25.55,78.4,91.47,13.64,201.04,1.24c48.69-5.53,103.09,7.47,142.06,37.57,38.72,29.57,62.16,75.92,76.44,117.52,14.3,41.57,19.84,78.58,33.93,119.67,14.6,40.93,37.59,86.28,43.08,138.65,4.28,39.44-1.71,82.83-22.37,110.34Z">
+                        </path>
+                    </svg>
+                    <img class="hero-img" src="img/fv.png" alt="起動画面と時間計測画面のスマホモックアップ" draggable="false">
+                </div>
+            </section>
         </div>
-        <p class="copy">&copy; hibi. All rights reserved.</p>
-        <p class="copy">※本サイトはポートフォリオ用に自主制作した架空のWebサイトです。</p>
-        <ul class="footer-menu">
-            <li><a href="">運営会社</a></li>
-            <li><a href="">利用規約</a></li>
-            <li><a href="">プライバシーポリシー</a></li>
-        </ul>
 
+        <section class="about" id="about">
+            <div class="about-inner section-inner">
+                <img src="./img/human01.png" alt="オレンジ色の服を着た考える女性" draggable="false" class="show">
+                <div class="about-inner-text">
+                    <h2 class="section-title">ABOUT HIBI</h2>
+                    <h3 class="section-read">やりたいことはあるのに、<br>今日も後回し。</h3>
+                    <p class="section-text">仕事や家事、連絡や予定。毎日をこなしているうちに、読書や勉強、運動など、自分のためにやりたかったことはつい後回しになってしまう・・・</p>
+                    <p class="about-benefit">hibiは、やることを増やすのではなく、今の自分が取り組む「今日のひとつ」を選びやすくします。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="how" id="how">
+            <div class="how-inner section-inner">
+                <div class="how-inner-text">
+                    <h2 class="section-title">HOW IT WORKS</h2>
+                    <h3 class="section-read">今日のひとつが、<br>習慣になるまで。</h3>
+                    <p class="section-text">やることを決めるところから、できたことを見返すところまで。<br>hibiなら、3つのステップで続けられます。</p>
+                </div>
+
+                <ol class="steps">
+                    <li class="step-card show">
+                        <div class="step-mark step-mark-orange">01</div>
+                        <p class="step-label">CHOOSE</p>
+                        <h4 class="step-read">今日のひとつを選ぶ</h4>
+                        <p class="step-text">登録した習慣の中から、今日取り組むものを選びます。今の気分や使える時間に合わせて、ひとつだけで大丈夫です。</p>
+                    </li>
+                    <li class="step-card show">
+                        <div class="step-mark step-mark-green">02</div>
+                        <p class="step-label">RECORD</p>
+                        <h4 class="step-read">自分に合う方法で残す</h4>
+                        <p class="step-text">時間・回数・完了から、行動に合う記録方法を選択。入力の負担を減らして、終わった直後に残せます。</p>
+                    </li>
+                    <li class="step-card show">
+                        <div class="step-mark step-mark-blue">03</div>
+                        <p class="step-label">REVIEW</p>
+                        <h4 class="step-read">できたことを見返す</h4>
+                        <p class="step-text">できた日はカレンダーに残り、週ごとのペースも確認できます。完璧さではなく、積み重ねが見えてきます。</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="features-inner section-inner">
+                <div class="features-inner-text">
+                    <h2 class="section-title">FEATURES</h2>
+                    <h3 class="section-read">無理なく続けるための、<br>4つの機能。</h3>
+                    <p class="section-text">始める前の迷いを減らし、取り組んだ後の小さな変化まで残します。</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="features-card feature-yellow">
+                        <div class="features-card-copy">
+                            <p class="features-card-number">01</p>
+                            <h4 class="features-card-read">今日やることを、<br>すぐ選べる</h4>
+                            <p class="features-card-text">登録した習慣を、起動後すぐに一覧表示。迷う時間を減らし、今できることから始められます。</p>
+                        </div>
+                        <img class="show show-up" src="./img/feature01.png" alt="今日取り組む習慣を選ぶ画面" draggable="false">
+                    </div>
+                    <div class="features-card feature-green">
+                        <div class="features-card-copy">
+                            <p class="features-card-number">02</p>
+                            <h4 class="features-card-read">好きな方法で、<br>記録できる</h4>
+                            <p class="features-card-text">勉強は時間、筋トレは回数、単発の行動は完了で記録。内容に合わせて、記録方法を選べます。</p>
+                        </div>
+                        <img class="feature-img-02 show show-up" src="./img/feature02.png" alt="時間と完了で習慣を記録する画面" draggable="false">
+                    </div>
+                    <div class="features-card feature-blue">
+                        <div class="features-card-copy">
+                            <p class="features-card-number">03</p>
+                            <h4 class="features-card-read">できた日が、<br>ひと目で残る</h4>
+                            <p class="features-card-text">取り組んだ日はカレンダーに記録。毎日でなくても、自分が続けてきた流れを見渡せます。</p>
+                        </div>
+                        <img class="show show-up" src="./img/feature03.png" alt="取り組んだ日を確認できるカレンダー画面" draggable="false">
+                    </div>
+                    <div class="features-card feature-purple">
+                        <div class="features-card-copy">
+                            <p class="features-card-number">04</p>
+                            <h4 class="features-card-read">自分のペースが、<br>見えてくる</h4>
+                            <p class="features-card-text">行動した時間や回数、達成した目標を週別に表示。グラフで見える積み重ねが自信に繋がります。</p>
+                        </div>
+                        <img class="show show-up" src="./img/feature04.png" alt="一週間の記録を確認できるレポート画面" draggable="false">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="day">
+            <div class="day-inner section-inner">
+                <div class="day-inner-text">
+                    <h2 class="section-title">A DAY WITH HIBI</h2>
+                    <h3 class="section-read">hibiのある1日。</h3>
+                </div>
+
+                <div class="day-card-list">
+                    <div class="day-card show show-up">
+                        <div class="day-card-copy">
+                            <p class="time">08:00</p>
+                            <p class="day-card-read-en">BEFORE GOING OUT</p>
+                            <h4 class="day-card-read">今日のひとつを選ぶ</h4>
+                            <p class="day-card-text">出かける前に、起動画面から今日取り組みたいことを確認。忙しい日は、短い時間でできるものをひとつ選びます。</p>
+                        </div>
+                        <img src="./img/day_01.png" alt="朝に今日の習慣を選ぶ画面" draggable="false">
+                    </div>
+                    <div class="day-card show show-up">
+                        <div class="day-card-copy">
+                            <p class="time">12:30</p>
+                            <p class="day-card-read-en">LUNCH BREAK</p>
+                            <h4 class="day-card-read">できる時間だけ取り組む</h4>
+                            <p class="day-card-text">昼休みに15分本を読む。タイマーで始めれば、記録のために別の操作をする必要はありません。</p>
+                        </div>
+                        <img src="./img/day_02.png" alt="昼休みにタイマーで時間を記録する画面" draggable="false">
+                    </div>
+                    <div class="day-card show show-up">
+                        <div class="day-card-copy">
+                            <p class="time">21:30</p>
+                            <p class="day-card-read-en">END OF THE DAY</p>
+                            <h4 class="day-card-read">できたことを見返す</h4>
+                            <p class="day-card-text">一日の終わりにカレンダーを確認。できなかったことより、今日残せたひとつを次につなげます。</p>
+                        </div>
+                        <img src="./img/day_03.png" alt="夜に取り組んだ日を振り返るカレンダー画面" draggable="false">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="foryou">
+            <div class="foryou-inner section-inner">
+                <div class="foryou-inner-text">
+                    <h2 class="section-title">FOR YOU</h2>
+                    <h3 class="section-read">こんなあなたに、hibiを。</h3>
+                </div>
+
+                <div class="foryou-box-list">
+                    <div class="foryou-box show">
+                        <img class="foryou-img-01" src="./img/human02.png" alt="指差しながらポイントを伝える人のイラスト">
+                        <p>今日やることを<br>迷わずひとつに決めたい。</p>
+                    </div>
+                    <div class="foryou-box show">
+                        <img class="foryou-img-02" src="./img/human03.png" alt="スマートフォンを片手に活用する人のイラスト">
+                        <p>スマホで手軽に、<br>できたことを記録したい。</p>
+                    </div>
+                    <div class="foryou-box show">
+                        <img class="foryou-img-03" src="./img/human04.png" alt="片手でOKサインをする人のイラスト">
+                        <p>自分に合う方法で、<br>無理なく習慣を続けたい。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="closing">
+            <div class="closing-inner section-inner">
+                <div class="about-inner-text">
+                    <img class="symbol" src="./img/logo-symbol.svg" alt="hibiのマーク" draggable="false">
+                    <h2 class="section-title">SMALL STEPS, EVERY DAY.</h2>
+                    <h3 class="section-read">小さな「やった」を、<br>明日の自分へ。</h3>
+                    <p class="section-text">今日のひとつを選び、終えたら残す。<br>その積み重ねが、やりたいことを少しずつ日々に変えていきます。</p>
+                    <div class="hero-cta">
+                        <a href="#">hibiをはじめる<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="closing-img show show-up">
+                    <img src="./img/day_01.png" alt="hibiで今日取り組む習慣を選ぶ画面" draggable="false" class="show">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <a class="hibi-logo">
+                <img src="./img/logo-symbol.svg" alt="" draggable="false">
+                <img src="./img/white-logo-type.svg" alt="" draggable="false">
+            </a>
+            <p>&copy; hibi. All rights reserved.</p>
+            <p class="footer-note">本サイトはポートフォリオ掲載用に制作した架空サービスのWebサイトです。</p>
+        </div>
     </footer>
 </body>
 
-<script>
-    $(function () {
-        // ハンバーガー
-        $('.hamburger-menu').on('click', function () {
-            $(this).toggleClass('is-open');
-            $('.menu').toggleClass('is-open');
-        });
-        $('.menu a').on('click', function () {
-            $('.hamburger-menu').removeClass('is-open');
-            $('.menu').removeClass('is-open');
-        });
-        // inview
-        $(".show").on("inview", function () {
-            $(this).addClass("fade-in");
-        });
-    });
-</script>
 <script>
     // 1. パス1 → パス2
     const tween1 = KUTE.fromTo('#hibi-shape',
@@ -275,6 +306,14 @@
 
     // アニメーション開始
     tween1.start();
+
+    $(function () {
+        $(".show").on("inview", function (event, isInView) {
+            if (isInView) {
+                $(this).addClass("fade-in");
+            }
+        });
+    });
 </script>
 
 </html>
