@@ -98,7 +98,7 @@ html {
 }
 
 .section-read {
-    font-size: clamp(28px, 3.5vw, 42px);
+    font-size: clamp(28px, 3.5vw, 40px);
     font-weight: 800;
     letter-spacing: 0.04em;
     line-height: 1.5;
@@ -167,18 +167,14 @@ html {
     display: flow-root;
     background-color: #f8f8fc;
     background-image:
-        radial-gradient(
-            ellipse 90% 80% at left top,
+        radial-gradient(ellipse 90% 80% at left top,
             #ffd3b8 0%,
             rgba(255, 211, 184, 0.65) 28%,
-            rgba(255, 211, 184, 0) 70%
-        ),
-        linear-gradient(
-            to bottom,
+            rgba(255, 211, 184, 0) 70%),
+        linear-gradient(to bottom,
             #F2F4FF 0%,
             #F2F4FF 55%,
-            #f8f8fc 100%
-        );
+            #f8f8fc 100%);
 }
 
 .hero {
@@ -343,7 +339,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 80px;
+    gap: clamp(32px, 5vw, 80px);
 
 
     .about-inner-text {
@@ -706,18 +702,14 @@ html {
 .closing {
     background-color: #f8f8fc;
     background-image:
-        radial-gradient(
-            ellipse 90% 80% at right bottom,
+        radial-gradient(ellipse 90% 80% at right bottom,
             #ffd3b8 0%,
             rgba(255, 211, 184, 0.65) 28%,
-            rgba(255, 211, 184, 0) 70%
-        ),
-        linear-gradient(
-            to top,
+            rgba(255, 211, 184, 0) 70%),
+        linear-gradient(to top,
             #F2F4FF 0%,
             #F2F4FF 55%,
-            #f8f8fc 100%
-        );
+            #f8f8fc 100%);
 }
 
 .closing-inner {
@@ -782,7 +774,6 @@ footer {
 
 @media (width <=900px) {
 
-    /* FEATURES：1列、文章を左・スマホ画像を右下に */
     .features-inner-text {
         text-align: left;
         gap: 16px;
@@ -829,6 +820,26 @@ footer {
             max-width: 300px;
         }
     }
+
+    .about-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+
+        .about-inner-text {
+            grid-row: 1;
+            gap: 16px;
+        }
+
+        img {
+            grid-row: 2;
+            justify-self: center;
+        }
+
+        .about-benefit {
+            padding: 16px;
+            font-size: 14px;
+        }
+    }
 }
 
 @media (width <=850px) {
@@ -838,8 +849,6 @@ footer {
         }
     }
 
-
-    /* 共通：左右の余白と文字サイズ */
     .section-inner {
         padding: 64px 20px;
     }
@@ -856,7 +865,6 @@ footer {
         font-size: 14px;
     }
 
-    /* ヘッダー：ロゴとCTAを残す */
     .header {
         padding: 12px 20px;
 
@@ -867,7 +875,6 @@ footer {
         }
     }
 
-    /* HOW：カードを縦並び、番号を左に配置 */
     .how-inner {
         gap: 32px;
 
@@ -915,7 +922,6 @@ footer {
         }
     }
 
-    /* DAY：カードを縦並び、スマホ画像は右下に */
     .day-inner-text {
         margin-bottom: 32px;
     }
@@ -956,7 +962,6 @@ footer {
         }
     }
 
-    /* FOR YOU：カードを縦並び、中はイラスト＋文章 */
     .foryou-inner-text {
         text-align: left;
         margin-bottom: 32px;
@@ -986,7 +991,6 @@ footer {
         }
     }
 
-    /* CLOSING：中央揃えで縦並び */
     .closing-inner {
         flex-direction: column;
         gap: 32px;
@@ -1017,7 +1021,6 @@ footer {
 
 @media (width <=700px) {
 
-    /* HERO：文章 → スマホ画像 */
     .hero {
         flex-direction: column;
         min-height: auto;
@@ -1047,7 +1050,6 @@ footer {
 
         .hero-img {
             left: 0;
-            /* width: 85%; */
         }
 
         .hero-visual-wrapper {
@@ -1062,27 +1064,6 @@ footer {
         }
     }
 
-
-    /* ABOUT：文章 → イラスト */
-    .about-inner {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 32px;
-
-        .about-inner-text {
-            grid-row: 1;
-            gap: 16px;
-        }
-
-        img {
-            grid-row: 2;
-            justify-self: center;
-        }
-
-        .about-benefit {
-            padding: 16px;
-            font-size: 14px;
-        }
-    }
 }
 
 
