@@ -11,10 +11,15 @@
 body {
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
     color: var(--blue);
+    background: #fffcf5;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
+}
+
+main {
     overflow-x: clip;
 }
 
@@ -110,6 +115,20 @@ html {
     line-height: 2;
 }
 
+.about,
+.how,
+.features,
+.day,
+.foryou,
+.closing {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media (width <=500px) {
+        padding: 32px 24px 32px;
+    }
+}
+
 /* ==============================================================
    main
 ============================================================== */
@@ -120,13 +139,17 @@ html {
     top: 0;
     left: 0;
     width: 100%;
+    height: 88px;
     z-index: 100;
     padding: 20px 40px;
-    background-color: rgba(248, 248, 252, 0.86);
-    border-bottom: 1px solid rgba(27, 29, 125, 0.07);
+    border: 1px solid #dbdbdb52;
+    background: #ffffff80;
+    @media (width <=500px) {
+height: 75px;
+    }
 
     .header-inner {
-        max-width: 1160px;
+        max-width: 1300px;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -134,7 +157,7 @@ html {
     }
 
     .header-logo {
-        width: 30px;
+        width: 45px;
         flex-shrink: 0;
 
         a,
@@ -165,22 +188,12 @@ html {
 /* ================ hero ================ */
 .hero-bg {
     display: flow-root;
-    background-color: #f8f8fc;
-    background-image:
-        radial-gradient(ellipse 90% 80% at left top,
-            #ffd3b8 0%,
-            rgba(255, 211, 184, 0.65) 28%,
-            rgba(255, 211, 184, 0) 70%),
-        linear-gradient(to bottom,
-            #F2F4FF 0%,
-            #F2F4FF 55%,
-            #f8f8fc 100%);
 }
 
 .hero {
     max-width: 1160px;
-    min-height: 720px;
-    margin: 120px auto 0;
+    min-height: 100svh;
+    margin: 32px auto 0;
     padding: 50px 40px 70px;
     display: flex;
     align-items: center;
@@ -326,14 +339,11 @@ html {
 .section-inner {
     max-width: 1160px;
     margin: 0 auto;
-    padding: 100px 24px;
-
 }
+
+
 
 /* ================ about ================ */
-.about {
-    background-color: #f8f8fc;
-}
 
 .about-inner {
     display: grid;
@@ -351,15 +361,31 @@ html {
 
     .about-benefit {
         font-weight: 600;
-        line-height: 2;
-        background-color: #fff0ea;
-        padding: 24px 24px;
-        border-left: 4px solid var(--btn);
+        line-height: 2.5;
         border-radius: 0 8px 8px 0;
+        text-decoration: underline;
+        text-decoration-color: #ffded2;
+        text-decoration-thickness: 12px;
+        text-underline-offset: 1px;
     }
 
-    img {
-        width: 100%;
+    .about-visual {
+        position: relative;
+
+        .human-shape {
+            display: block;
+            width: 100%;
+            /* transform: scale(1.2); */
+            opacity: 0.7;
+        }
+
+        .human-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+        }
     }
 }
 
@@ -367,41 +393,43 @@ html {
 /* ================ how ================ */
 .how {
     position: relative;
-    overflow: hidden;
-    background-color: #fffefc;
+}
 
-    /* 背景のシェイプ：左上にオレンジ、右下に水色 */
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        width: clamp(360px, 56vw, 800px);
-        aspect-ratio: 92 / 86;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        opacity: 0.32;
-        pointer-events: none;
-    }
+.how-shape {
+    position: absolute;
+    right: 20px;
+    width: 52%;
+    max-width: 1000px;
+    opacity: 0.3;
+    z-index: 0;
 
-    &::before {
-        top: 0;
-        left: 0;
-        background-image: url("../img/step-shape-01.svg");
-        transform: translate(-28%, -36%) rotate(-18deg);
-    }
-
-    &::after {
-        right: 0;
-        bottom: 0;
-        background-image: url("../img/step-shape-03.svg");
-        transform: translate(28%, 36%) rotate(24deg);
+    @media (width <=500px) {
+        width: 92%;
     }
 }
 
+.how-shape-top {
+    top: -10%;
+    right: -20%;
+
+    @media (width <=500px) {
+        top: 10%;
+        right: -60%;
+    }
+}
+
+.how-shape-bottom {
+    bottom: -40%;
+    left: -21%;
+
+    @media (width <=500px) {
+        bottom: -9%;
+        left: -51%;
+    }
+}
+
+
 .how-inner {
-    /* 文章とカードを背景のシェイプより前に置く */
     position: relative;
     z-index: 1;
     display: flex;
@@ -424,7 +452,7 @@ html {
         z-index: 1;
         padding: 32px 30px 38px;
         background-color: var(--white);
-        border: 1px solid #dcddec;
+        border: 1px solid #efefef;
         border-radius: 24px;
 
         .step-mark {
@@ -483,9 +511,6 @@ html {
 }
 
 /* ================ features ================ */
-.features {
-    background-color: #e9eeff;
-}
 
 .features-inner-text {
     display: flex;
@@ -508,7 +533,6 @@ html {
     display: flex;
 
     border-radius: 24px;
-    border: 1px solid #dcddec;
     padding: 112px 40px;
 
     .features-card-copy {
@@ -554,38 +578,36 @@ html {
 }
 
 .feature-yellow {
-    background: linear-gradient(145deg, #fffaf0, rgba(255, 233, 179, 1));
+    background: #FFF4E5;
 }
 
 .feature-green {
-    background: linear-gradient(145deg, #fffaf0, rgba(216, 229, 161, 1));
+    background: #F1F5DD;
 }
 
 .feature-blue {
-    background: linear-gradient(145deg, #fffaf0, rgba(161, 227, 229, 1));
+    background: #E2F4F3;
 }
 
 .feature-purple {
-    background: linear-gradient(145deg, #fffaf0, rgba(196, 183, 229, 1));
+    background: #EEE8F6;
 }
 
 
 /* ================ day ================ */
+
 .day {
-    background-color: var(--blue);
+    background-color: #fff7dd;
 }
 
 .day-inner-text {
     text-align: center;
     margin-bottom: 60px;
-
-    .section-read {
-        color: var(--white);
-    }
 }
 
 .day-card-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
 
@@ -596,17 +618,20 @@ html {
     display: flex;
 
     border-radius: 24px;
-    background-color: rgba(240, 240, 240, 0.1);
-    padding: 16px 40px 112px 40px;
+    padding: 32px 40px 112px 40px;
+
+    background-color: var(--white);
+    border: 1px solid #efefef;
 
     .time {
-        color: var(--btn);
         text-align: center;
         font-family: "Poppins", "sans-serif";
-        background-color: var(--blue);
+        font-weight: 500;
         margin: auto;
-        padding: 6px 12px 6px 16px;
+        padding: 6px 40px 6px;
         border-radius: 80px;
+        background-color: #efefef;
+        font-weight: 600;
     }
 
     .day-card-copy {
@@ -627,14 +652,11 @@ html {
         .day-card-read {
             font-size: 20px;
             font-weight: bold;
-            color: var(--white);
         }
 
         .day-card-text {
-            color: var(--white);
             opacity: 0.8;
             font-size: 14px;
-            font-weight: 300;
             line-height: 2;
         }
     }
@@ -651,8 +673,42 @@ html {
 }
 
 /* ================ foryou ================ */
+
 .foryou {
-    background-color: #fff4d6;
+    position: relative;
+}
+
+.foryou-shape  {
+    position: absolute;
+    right: 20px;
+    width: 52%;
+    max-width: 1000px;
+    opacity: 0.5;
+    z-index: -1;
+     @media (width <=500px) {
+        width: 95%;
+     }
+}
+
+.foryou-shape-top {
+    top: -10%;
+    left: -20%;
+
+    @media (width <=500px) {
+        top: -20%;
+        left: -40%;
+    }
+}
+
+.foryou-shape-bottom {
+    bottom: -40%;
+    right: -17%;
+
+    @media (width <=500px) {
+        bottom: -15%;
+        right: -40%;
+    }
+
 }
 
 .foryou-inner-text {
@@ -669,6 +725,8 @@ html {
     background-color: var(--white);
     border-radius: 24px;
     padding: 24px 24px 0 24px;
+    border: 1px solid #efefef;
+    ;
 
     img {
         border-radius: 16px;
@@ -697,18 +755,6 @@ html {
 }
 
 /* ================ closing ================ */
-.closing {
-    background-color: #f8f8fc;
-    background-image:
-        radial-gradient(ellipse 90% 80% at right bottom,
-            #ffd3b8 0%,
-            rgba(255, 211, 184, 0.65) 28%,
-            rgba(255, 211, 184, 0) 70%),
-        linear-gradient(to top,
-            #F2F4FF 0%,
-            #F2F4FF 55%,
-            #f8f8fc 100%);
-}
 
 .closing-inner {
     display: flex;
@@ -834,7 +880,6 @@ footer {
         }
 
         .about-benefit {
-            padding: 16px;
             font-size: 14px;
         }
     }
@@ -845,10 +890,6 @@ footer {
         a {
             padding: 14px 48px 14px 56px;
         }
-    }
-
-    .section-inner {
-        padding: 64px 20px;
     }
 
     .section-title {
@@ -925,7 +966,7 @@ footer {
     }
 
     .day-card-list {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
     .day-card {
